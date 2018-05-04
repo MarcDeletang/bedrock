@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing bedrock config merger Check the service shape 1`] = `
+Object {
+  "merge": [Function],
+}
+`;
+
+exports[`Testing bedrock config merger Testing merge empty and not empty 1`] = `
+Object {
+  "controllers": Object {
+    "0": Object {},
+    "1": Object {
+      "foo": Object {
+        "PATH": "HELLO",
+        "handler": [Function],
+      },
+    },
+  },
+  "decorations": Array [
+    Object {
+      "method": [Function],
+      "name": "bar",
+      "target": "foo",
+    },
+  ],
+  "hapiEvents": Array [
+    Object {
+      "method": [Function],
+      "name": "onPreAuth",
+    },
+  ],
+  "models": Array [
+    Object {
+      "init": [Function],
+    },
+  ],
+  "registers": Array [
+    [Function],
+  ],
+  "services": Array [
+    Object {
+      "foo": "bar",
+      "init": [Function],
+    },
+  ],
+}
+`;
+
+exports[`Testing bedrock config merger Testing merge empty params 1`] = `
+Object {
+  "controllers": Object {
+    "0": Object {},
+    "1": Object {},
+  },
+  "decorations": Array [],
+  "hapiEvents": Array [],
+  "models": Array [],
+  "registers": Array [],
+  "services": Array [],
+}
+`;
+
+exports[`Testing bedrock config merger Testing merge not empty and not empty 1`] = `
+Object {
+  "controllers": Object {
+    "0": Object {
+      "foo": Object {
+        "PATH": "HELLO",
+        "handler": [Function],
+      },
+    },
+    "1": Object {
+      "foo": Object {
+        "PATH": "HELLO",
+        "handler": [Function],
+      },
+    },
+  },
+  "decorations": Array [
+    Object {
+      "method": [Function],
+      "name": "bar",
+      "target": "foo",
+    },
+    Object {
+      "method": [Function],
+      "name": "bar",
+      "target": "foo",
+    },
+  ],
+  "hapiEvents": Array [
+    Object {
+      "method": [Function],
+      "name": "onPreAuth",
+    },
+    Object {
+      "method": [Function],
+      "name": "onPreAuth",
+    },
+  ],
+  "models": Array [
+    Object {
+      "init": [Function],
+    },
+    Object {
+      "init": [Function],
+    },
+  ],
+  "registers": Array [
+    [Function],
+    [Function],
+  ],
+  "services": Array [
+    Object {
+      "foo": "bar",
+      "init": [Function],
+    },
+    Object {
+      "foo": "bar",
+      "init": [Function],
+    },
+  ],
+}
+`;

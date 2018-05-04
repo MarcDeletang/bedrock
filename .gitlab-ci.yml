@@ -1,0 +1,69 @@
+image: node:8-alpine
+
+before_script:
+  - yarn install
+  - apk update && apk upgrade && apk add -yy openssh-client sudo
+
+cache:
+  paths:
+    - node_modules/
+
+lint:
+  stage: test
+  script:
+    - yarn lint
+
+compile:
+  stage: test
+  script:
+    - yarn compile
+
+coverage:
+  stage: test
+  script:
+    - yarn coverage
+  artifacts:
+    paths:
+      - coverage/lcov-report
+    expire_in: 3 days
+
+doc:
+  stage: test
+  script:
+    - yarn doc
+  artifacts:
+    paths:
+      - doc
+    expire_in: 3 days
+  only:
+    - master
+
+upload_coverage:
+  stage: deploy
+  dependencies:
+    - coverage
+  script:
+    - mkdir ~/.ssh
+    - echo "$SSH_KNOWN_HOST_COVERAGE" > ~/.ssh/known_hosts
+    - echo "$SSH_PRIVATE_COVERAGE" > ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
+    - sudo -u root scp -i ~/.ssh/id_rsa -r coverage/lcov-report/* ubuntu@52.49.219.27:/home/ubuntu/nginx_subdomain/coverage/bedrock/$CI_COMMIT_REF_NAME
+  only:
+    - master
+    - preprod
+    - dev
+  allow_failure: true
+
+upload_doc:
+  stage: deploy
+  dependencies:
+    - doc
+  script:
+    - mkdir ~/.ssh
+    - echo "$SSH_KNOWN_HOST_COVERAGE" > ~/.ssh/known_hosts
+    - echo "$SSH_PRIVATE_COVERAGE" > ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
+    - sudo -u root scp -i ~/.ssh/id_rsa -r doc/* ubuntu@52.49.219.27:/home/ubuntu/nginx_subdomain/doc/bedrock
+  only:
+    - master
+  allow_failure: true

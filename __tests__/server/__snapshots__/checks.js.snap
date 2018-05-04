@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing the server checks Check valid empty params 1`] = `true`;
+
+exports[`Testing the server checks Check valid not empty params 1`] = `true`;
+
+exports[`Testing the server checks checks invalid models 1`] = `"models"`;
+
+exports[`Testing the server checks checks invalid models 2`] = `"models"`;
+
+exports[`Testing the server checks checks invalid models 3`] = `"models"`;
+
+exports[`Testing the server checks checks invalid models.init 1`] = `"models.init is not a function for [object Object]"`;
+
+exports[`Testing the server checks checks invalid models.init 2`] = `"models.init is not a function for [object Object]"`;
+
+exports[`Testing the server checks checks invalid registers 1`] = `"registers"`;
+
+exports[`Testing the server checks checks invalid registers 2`] = `"registers"`;
+
+exports[`Testing the server checks checks invalid registers 3`] = `"registers"`;
+
+exports[`Testing the server checks checks invalid registers.init 1`] = `"registers is not a function, got: {}"`;
+
+exports[`Testing the server checks checks invalid registers.init 2`] = `"registers is not a function, got: {\\"init\\":true}"`;
+
+exports[`Testing the server checks checks invalid services 1`] = `"services"`;
+
+exports[`Testing the server checks checks invalid services 2`] = `"services"`;
+
+exports[`Testing the server checks checks invalid services 3`] = `"services"`;
+
+exports[`Testing the server checks checks invalid services.init 1`] = `"services.init is not a function for [object Object]"`;
+
+exports[`Testing the server checks checks invalid services.init 2`] = `"services.init is not a function for [object Object]"`;

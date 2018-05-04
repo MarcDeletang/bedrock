@@ -1,0 +1,20 @@
+{
+  "foo": "bar",
+  "hapi": {
+    "constructor": {
+      "debug": {
+        "log": [
+          "error"
+        ],
+        "request": [
+          "error"
+        ]
+      }
+    },
+    "connections": [
+      {
+        "port": 1337
+      }
+    ]
+  }
+}

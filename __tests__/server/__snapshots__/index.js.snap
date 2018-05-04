@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing the server initialisation Check server shape 1`] = `
+Object {
+  "config": null,
+  "env": "test",
+  "hapi": null,
+  "init": [Function],
+  "log": MockLogger {},
+}
+`;
+
+exports[`Testing the server initialisation Reject with error (decorations) 1`] = `[Error: decorations]`;
+
+exports[`Testing the server initialisation Reject with error (env) 1`] = `[Error: process.env.NODE_ENV must be set]`;
+
+exports[`Testing the server initialisation Reject with error (models) 1`] = `[Error: models]`;
+
+exports[`Testing the server initialisation Reject with error (registers) 1`] = `[Error: registers]`;
+
+exports[`Testing the server initialisation Reject with error (routes) 1`] = `[Error: routes]`;
+
+exports[`Testing the server initialisation Reject with error (services) 1`] = `[Error: services]`;

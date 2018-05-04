@@ -1,0 +1,146 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing the mailer Send mail error recipient 1`] = `[Error: recipient]`;
+
+exports[`Testing the mailer Send mail error recipient email 1`] = `[Error: recipient.email]`;
+
+exports[`Testing the mailer Send mail error recipient firstName 1`] = `[Error: recipient.firstName]`;
+
+exports[`Testing the mailer Send mail error recipient lastName 1`] = `[Error: recipient.lastName]`;
+
+exports[`Testing the mailer Send mail error subject 1`] = `
+Object {
+  "err": "Invalid subject",
+  "message": 42,
+}
+`;
+
+exports[`Testing the mailer Send mail no error 1`] = `
+Object {
+  "async": true,
+  "ip_pool": "Main Pool",
+  "message": Object {
+    "from_email": "bar",
+    "from_name": "baz",
+    "html": "content",
+    "subject": "subject",
+    "to": Array [
+      Object {
+        "email": "foo@bar.baz",
+        "name": "foo baz",
+        "type": "to",
+      },
+    ],
+  },
+  "send_at": "2000-01-01 00:00:00",
+}
+`;
+
+exports[`Testing the mailer Send mails error recipient 1`] = `[TypeError: Cannot read property 'forEach' of null]`;
+
+exports[`Testing the mailer Send mails no error 1`] = `
+Object {
+  "async": true,
+  "ip_pool": "Main Pool",
+  "message": Object {
+    "from_email": "bar",
+    "from_name": "baz",
+    "html": "content",
+    "subject": "subject",
+    "to": Array [
+      Object {
+        "email": "foo@bar.baz",
+        "name": "foo baz",
+        "type": "to",
+      },
+    ],
+  },
+  "send_at": "2000-01-01 00:00:00",
+}
+`;
+
+exports[`Testing the mailer service initialisation Check the service shape 1`] = `
+Object {
+  "init": [Function],
+  "sendMail": [Function],
+  "sendMails": [Function],
+}
+`;
+
+exports[`Testing the mailer service initialisation Load in prod without error 1`] = `
+Object {
+  "address": "bar",
+  "client": Mandrill {
+    "apikey": "foo",
+    "debug": false,
+    "exports": Exports {
+      "master": [Circular],
+    },
+    "inbound": Inbound {
+      "master": [Circular],
+    },
+    "internal": Internal {
+      "master": [Circular],
+    },
+    "ips": Ips {
+      "master": [Circular],
+    },
+    "messages": Messages {
+      "master": [Circular],
+    },
+    "metadata": Metadata {
+      "master": [Circular],
+    },
+    "rejects": Rejects {
+      "master": [Circular],
+    },
+    "senders": Senders {
+      "master": [Circular],
+    },
+    "subaccounts": Subaccounts {
+      "master": [Circular],
+    },
+    "tags": Tags {
+      "master": [Circular],
+    },
+    "templates": Templates {
+      "master": [Circular],
+    },
+    "urls": Urls {
+      "master": [Circular],
+    },
+    "users": Users {
+      "master": [Circular],
+    },
+    "webhooks": Webhooks {
+      "master": [Circular],
+    },
+    "whitelists": Whitelists {
+      "master": [Circular],
+    },
+  },
+  "name": "baz",
+}
+`;
+
+exports[`Testing the mailer service initialisation Load without error 1`] = `
+Object {
+  "address": "bar",
+  "client": Object {
+    "address": "foo",
+    "messages": Object {
+      "send": [Function],
+    },
+    "name": "bar",
+  },
+  "name": "baz",
+}
+`;
+
+exports[`Testing the mailer service initialisation Reject with error (config.mailer) 1`] = `[Error: config.mailer]`;
+
+exports[`Testing the mailer service initialisation Reject with error (config.mailer.address) 1`] = `[Error: config.mailer.address]`;
+
+exports[`Testing the mailer service initialisation Reject with error (config.mailer.apiKey) 1`] = `[Error: config.mailer.apiKey]`;
+
+exports[`Testing the mailer service initialisation Reject with error (config.mailer.name) 1`] = `[Error: config.mailer.name]`;

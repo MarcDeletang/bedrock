@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing the logger Check the log method (coverage) 1`] = `undefined`;
+
+exports[`Testing the logger Check the logger properties 1`] = `MockLogger {}`;
+
+exports[`Testing the logger Check the logger request method 1`] = `undefined`;
+
+exports[`Testing the logger Check the logger server method 1`] = `undefined`;

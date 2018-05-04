@@ -1,0 +1,21 @@
+{
+  "coverageReporters": [
+    "text-summary",
+    "lcov"
+  ],
+  "collectCoverageFrom": [
+    "app/**/*.{ts}"
+  ],
+  "modulePaths": [
+    "<rootDir>"
+  ],
+  "moduleFileExtensions": [
+    "ts",
+    "js"
+  ],
+  "transform": {
+    "\\.(ts)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+  },
+  "testRegex": "/__tests__/.*\\.(ts|js)$",
+  "mapCoverage": true
+}

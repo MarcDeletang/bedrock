@@ -1,0 +1,41 @@
+{
+  "name": "bedrock",
+  "version": "1.0.4",
+  "description": "",
+  "main": "_build/index.js",
+  "types": "_build/index.d.ts",
+  "scripts": {
+    "lint": "tslint -p tsconfig.json --type-check",
+    "test": "jest --config jest.config.json --runInBand",
+    "test:update": "jest -u --config jest.config.json --runInBand",
+    "coverage": "rm -rf coverage && jest --coverage --config jest.config.json --runInBand",
+    "compile": "rm -rf _build/* && tsc -d",
+    "doc": "rm -rf doc/* && typedoc --out doc/ app/",
+    "victory": "yarn install && yarn lint && yarn test && yarn compile && git add ."
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/hapi": "16.1.6",
+    "@types/jest": "20.0.2",
+    "@types/knex": "0.0.56",
+    "@types/lodash": "4.14.68",
+    "@types/mongoose": "4.7.18",
+    "@types/node": "8.0.13",
+    "jest": "20.0.4",
+    "ts-jest": "20.0.7",
+    "tslint": "5.5.0",
+    "typedoc": "0.7.1",
+    "typescript": "2.4.1"
+  },
+  "dependencies": {
+    "config": "1.26.1",
+    "hapi": "16.4.3",
+    "knex": "0.13.0",
+    "lodash": "4.17.4",
+    "mandrill-api": "1.0.45",
+    "mongoose": "4.11.3",
+    "objection": "0.8.6",
+    "pg": "6.4.1"
+  }
+}
